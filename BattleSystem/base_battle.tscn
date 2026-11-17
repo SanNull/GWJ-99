@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://sh0b5vpde6xf"]
+
+[ext_resource type="Script" uid="uid://4qgfn75ti88q" path="res://BattleSystem/base_battle.gd" id="1_ydrvr"]
+[ext_resource type="PackedScene" uid="uid://t8tuqv7wy7vl" path="res://BattleSystem/BattleControl.tscn" id="2_gxc00"]
+[ext_resource type="Script" uid="uid://c7qpvtmkey8b3" path="res://BaseResources/EnemyStats.gd" id="2_xeghx"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="3_p3xf7"]
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="4_b4p6o"]
+[ext_resource type="Script" uid="uid://cjnucr1l5i3eb" path="res://BaseResources/EnemySet.gd" id="4_c0hpq"]
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="5_1a5dm"]
+
+[sub_resource type="Resource" id="Resource_ea0mc"]
+script = ExtResource("3_p3xf7")
+texture = ExtResource("5_1a5dm")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"
+
+[sub_resource type="Resource" id="Resource_8ht4h"]
+script = ExtResource("2_xeghx")
+move_set = Array[ExtResource("3_p3xf7")]([SubResource("Resource_ea0mc")])
+metadata/_custom_type_script = "uid://c7qpvtmkey8b3"
+
+[sub_resource type="Resource" id="Resource_ydrvr"]
+script = ExtResource("4_c0hpq")
+enemy_set = Array[ExtResource("2_xeghx")]([SubResource("Resource_8ht4h")])
+metadata/_custom_type_script = "uid://cjnucr1l5i3eb"
+
+[node name="BaseBattle" type="Control" unique_id=1365340935]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ydrvr")
+enemy_set = SubResource("Resource_ydrvr")
+
+[node name="BattleControl" parent="." unique_id=708539934 instance=ExtResource("2_gxc00")]
+layout_mode = 1
+
+[editable path="BattleControl"]

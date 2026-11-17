@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="MultiplierSkill" format=3 uid="uid://beqnpbtk80dw3"]
-
-[ext_resource type="Script" uid="uid://bk044dtnk7qrm" path="res://Test/multiplier_skill.gd" id="1_kja7a"]
-
-[resource]
-script = ExtResource("1_kja7a")
-metadata/_custom_type_script = "uid://bk044dtnk7qrm"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjxbch0ugch8a"]
 
-[ext_resource type="Script" uid="uid://bsoklp1mad5fn" path="res://enemy_control.gd" id="1_3o8sp"]
-[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="2_habxb"]
+[ext_resource type="Script" uid="uid://bsoklp1mad5fn" path="res://Scenes/enemy_control.gd" id="1_xvrdg"]
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="2_qnol8"]
 
 [node name="EnemyControl" type="VBoxContainer" unique_id=457240052]
 anchors_preset = -1
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_3o8sp")
+script = ExtResource("1_xvrdg")
 metadata/_edit_use_anchors_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1218326635]
@@ -20,4 +20,4 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1067278635]
 layout_mode = 2
-texture_normal = ExtResource("2_habxb")
+texture_normal = ExtResource("2_qnol8")

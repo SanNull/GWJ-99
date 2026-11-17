@@ -1,6 +1,80 @@
-[gd_scene format=3 uid="uid://dwcjjy4hhwsw3"]
+[gd_scene format=3 uid="uid://bw5nngt2603sq"]
 
-[ext_resource type="Script" uid="uid://b23umxk8vgao4" path="res://battle_manager.gd" id="1_r0ul7"]
+[ext_resource type="Script" uid="uid://bbfymmfh23524" path="res://battle_manager.gd" id="1_rhx7j"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_x37lc"]
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="3_jeb60"]
+[ext_resource type="Script" uid="uid://ch7fqtk7rpoya" path="res://BaseResources/playerStats.gd" id="3_jvf6o"]
+[ext_resource type="Script" uid="uid://dp7rcrh1rmc01" path="res://Effects&Skills/baseDmg.gd" id="4_jbroe"]
+[ext_resource type="Script" uid="uid://do17m6orb6p4f" path="res://BaseResources/Skill.gd" id="4_jeb60"]
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="5_c5lcc"]
+[ext_resource type="Script" uid="uid://c7qpvtmkey8b3" path="res://BaseResources/EnemyStats.gd" id="5_jbroe"]
+[ext_resource type="Script" uid="uid://bfvlbh3rlhh5w" path="res://Effects&Skills/baseDefense.gd" id="6_jbroe"]
 
-[node name="BattleManager" type="Node" unique_id=1823996122]
-script = ExtResource("1_r0ul7")
+[sub_resource type="Resource" id="Resource_1veg7"]
+script = ExtResource("4_jbroe")
+dmg = 30
+metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
+
+[sub_resource type="Resource" id="Resource_c5lcc"]
+script = ExtResource("2_x37lc")
+duration = 2
+effects = Array[ExtResource("3_jeb60")]([SubResource("Resource_1veg7")])
+texture = ExtResource("5_c5lcc")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"
+
+[sub_resource type="Resource" id="Resource_jeb60"]
+script = ExtResource("4_jbroe")
+metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
+
+[sub_resource type="Resource" id="Resource_jbroe"]
+script = ExtResource("2_x37lc")
+effects = Array[ExtResource("3_jeb60")]([SubResource("Resource_jeb60")])
+texture = ExtResource("5_c5lcc")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"
+
+[sub_resource type="Resource" id="Resource_2hcb8"]
+script = ExtResource("4_jbroe")
+dmg = 40
+metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
+
+[sub_resource type="Resource" id="Resource_md0dw"]
+script = ExtResource("2_x37lc")
+start_on_next_turn = true
+effects = Array[ExtResource("3_jeb60")]([SubResource("Resource_2hcb8")])
+texture = ExtResource("5_c5lcc")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"
+
+[sub_resource type="Resource" id="Resource_yycfi"]
+script = ExtResource("6_jbroe")
+defense = 99
+apply_on_self = true
+metadata/_custom_type_script = "uid://bfvlbh3rlhh5w"
+
+[sub_resource type="Resource" id="Resource_4mvp7"]
+script = ExtResource("2_x37lc")
+start_on_next_turn = true
+effects = Array[ExtResource("3_jeb60")]([SubResource("Resource_yycfi")])
+texture = ExtResource("5_c5lcc")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"
+
+[sub_resource type="Resource" id="Resource_bn6ny"]
+script = ExtResource("3_jvf6o")
+move_set = Array[ExtResource("2_x37lc")]([SubResource("Resource_c5lcc"), SubResource("Resource_jbroe"), SubResource("Resource_md0dw"), SubResource("Resource_4mvp7")])
+metadata/_custom_type_script = "uid://ch7fqtk7rpoya"
+
+[sub_resource type="Resource" id="Resource_r0ul7"]
+script = ExtResource("5_jbroe")
+hp = 99.0
+defense = 0.0
+metadata/_custom_type_script = "uid://c7qpvtmkey8b3"
+
+[sub_resource type="Resource" id="Resource_c1csy"]
+script = ExtResource("5_jbroe")
+hp = 666.0
+defense = 0.0
+metadata/_custom_type_script = "uid://c7qpvtmkey8b3"
+
+[node name="Battle Manager" type="Node" unique_id=1521247276]
+script = ExtResource("1_rhx7j")
+player = SubResource("Resource_bn6ny")
+enemies = Array[ExtResource("5_jbroe")]([SubResource("Resource_r0ul7"), SubResource("Resource_c1csy")])

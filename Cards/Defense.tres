@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://o3rdf4niawjo"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_d7not"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_fra8p"]
+[ext_resource type="Script" uid="uid://bfvlbh3rlhh5w" path="res://Effects&Skills/baseDefense.gd" id="2_s0y2j"]
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="3_s0y2j"]
+
+[sub_resource type="Resource" id="Resource_d7not"]
+script = ExtResource("2_s0y2j")
+apply_on_self = true
+metadata/_custom_type_script = "uid://bfvlbh3rlhh5w"
+
+[resource]
+script = ExtResource("2_fra8p")
+descrpition = "Defends %s%s%s on next turn"
+queue_for_next_turn = true
+effects = Array[ExtResource("1_d7not")]([SubResource("Resource_d7not")])
+texture = ExtResource("3_s0y2j")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

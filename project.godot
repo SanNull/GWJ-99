@@ -14,10 +14,23 @@ config/name="VaginaSlay"
 config/features=PackedStringArray("4.8", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventBus="*uid://bnjlx5wk0xtmf"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://BaseResources/": "red",
+"res://BattleSystem/": "green",
+"res://Cards/": "blue",
+"res://Effects&Skills/": "pink"
+}
 
 [gui]
 

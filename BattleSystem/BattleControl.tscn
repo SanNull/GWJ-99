@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://t8tuqv7wy7vl"]
 
-[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="1_ip7xm"]
-[ext_resource type="Script" uid="uid://cot7prhofk287" path="res://BattleControl.gd" id="1_oxp8w"]
-[ext_resource type="Script" uid="uid://carxou3i03rsd" path="res://player_control.gd" id="2_i431l"]
-[ext_resource type="Script" uid="uid://b23umxk8vgao4" path="res://battle_manager.gd" id="3_7sfm4"]
+[ext_resource type="Script" uid="uid://cot7prhofk287" path="res://BattleSystem/BattleControl.gd" id="1_8ht4h"]
+[ext_resource type="PackedScene" uid="uid://bc7ybayes2845" path="res://Scenes/player_control.tscn" id="2_ea0mc"]
+[ext_resource type="PackedScene" uid="uid://bw5nngt2603sq" path="res://battle_manager.tscn" id="3_8ht4h"]
 
 [node name="BattleControl" type="Control" unique_id=708539934]
 layout_mode = 3
@@ -12,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oxp8w")
+script = ExtResource("1_8ht4h")
 
 [node name="Background" type="Control" parent="." unique_id=966567608]
 layout_mode = 1
@@ -51,36 +50,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayerControl" type="Control" parent="PlayerContainer" unique_id=93075601]
+[node name="PlayerControl" parent="PlayerContainer" unique_id=44106323 instance=ExtResource("2_ea0mc")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
-script = ExtResource("2_i431l")
-
-[node name="Emotion" type="TextureRect" parent="PlayerContainer/PlayerControl" unique_id=2051383640]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_ip7xm")
-
-[node name="ProgressBar" type="ProgressBar" parent="PlayerContainer/PlayerControl" unique_id=6287082]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -27.0
-grow_horizontal = 2
-grow_vertical = 0
 
 [node name="EndTurn" type="Button" parent="." unique_id=725324561]
 layout_mode = 0
@@ -102,6 +74,4 @@ grow_horizontal = 0
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="BattleManager" type="Node" parent="." unique_id=1736116209]
-script = ExtResource("3_7sfm4")
-metadata/_custom_type_script = "uid://b23umxk8vgao4"
+[node name="Battle Manager" parent="." unique_id=1521247276 instance=ExtResource("3_8ht4h")]
