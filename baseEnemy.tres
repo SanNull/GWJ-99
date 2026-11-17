@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://dnbc8n7kdbuu8"]
+
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://RPGResources/Card.gd" id="1_ncy1t"]
+[ext_resource type="Script" uid="uid://cpsxe2vr0icen" path="res://RPGResources/Character.gd" id="2_dcksu"]
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://RPGResources/Effect.gd" id="2_j8i5c"]
+[ext_resource type="Script" uid="uid://dp7rcrh1rmc01" path="res://Test/baseDmg.gd" id="3_cc53n"]
+
+[sub_resource type="Resource" id="Resource_cc53n"]
+script = ExtResource("3_cc53n")
+metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
+
+[sub_resource type="Resource" id="Resource_j8i5c"]
+script = ExtResource("1_ncy1t")
+effects = Array[ExtResource("2_j8i5c")]([SubResource("Resource_cc53n")])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"
+
+[resource]
+script = ExtResource("2_dcksu")
+move_set = Array[ExtResource("1_ncy1t")]([SubResource("Resource_j8i5c")])
+metadata/_custom_type_script = "uid://cpsxe2vr0icen"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BaseDefense" format=3 uid="uid://ckoqt63l0w5xv"]
+
+[ext_resource type="Script" uid="uid://bfvlbh3rlhh5w" path="res://Test/baseDefense.gd" id="1_mps0y"]
+
+[resource]
+script = ExtResource("1_mps0y")
+apply_on_self = true
+metadata/_custom_type_script = "uid://bfvlbh3rlhh5w"

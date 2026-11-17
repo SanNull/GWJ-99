@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://t8tuqv7wy7vl"]
+
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="1_ip7xm"]
+[ext_resource type="Script" uid="uid://cot7prhofk287" path="res://BattleControl.gd" id="1_oxp8w"]
+[ext_resource type="Script" uid="uid://carxou3i03rsd" path="res://player_control.gd" id="2_i431l"]
+[ext_resource type="Script" uid="uid://b23umxk8vgao4" path="res://battle_manager.gd" id="3_7sfm4"]
+
+[node name="BattleControl" type="Control" unique_id=708539934]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oxp8w")
+
+[node name="Background" type="Control" parent="." unique_id=966567608]
+layout_mode = 1
+anchor_right = 0.9973958
+anchor_bottom = 0.71141976
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1492293007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EnemyContainer" type="VBoxContainer" parent="Background" unique_id=1489339205]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 0.9956484
+anchor_bottom = 0.99132323
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerContainer" type="HBoxContainer" parent="." unique_id=1953785843]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.712963
+anchor_right = 0.9982639
+anchor_bottom = 1.0046296
+metadata/_edit_use_anchors_ = true
+
+[node name="CardContainer" type="HBoxContainer" parent="PlayerContainer" unique_id=1835437952]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerControl" type="Control" parent="PlayerContainer" unique_id=93075601]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+script = ExtResource("2_i431l")
+
+[node name="Emotion" type="TextureRect" parent="PlayerContainer/PlayerControl" unique_id=2051383640]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ip7xm")
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerContainer/PlayerControl" unique_id=6287082]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="EndTurn" type="Button" parent="." unique_id=725324561]
+layout_mode = 0
+offset_left = 1028.0
+offset_top = 400.0
+offset_right = 1106.0
+offset_bottom = 431.0
+text = "End Turn"
+
+[node name="Skills" type="VBoxContainer" parent="." unique_id=1146564666]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8559028
+anchor_top = 0.0077160494
+anchor_right = 0.9965278
+anchor_bottom = 0.61728394
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BattleManager" type="Node" parent="." unique_id=1736116209]
+script = ExtResource("3_7sfm4")
+metadata/_custom_type_script = "uid://b23umxk8vgao4"
