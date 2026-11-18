@@ -2,12 +2,18 @@
 
 [ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_2e1h1"]
 [ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_12aya"]
+[ext_resource type="Script" uid="uid://b2vvfl2juf3ak" path="res://Resources/Effects/pierceDamage.gd" id="2_gq3lq"]
 [ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="3_gq3lq"]
+
+[sub_resource type="Resource" id="Resource_12aya"]
+script = ExtResource("2_gq3lq")
+metadata/_custom_type_script = "uid://b2vvfl2juf3ak"
 
 [resource]
 script = ExtResource("2_12aya")
-descrpition = "Grosses out opponent by dealing %s%s%s for 3 turns, high chance of feeling queer"
-duration = 3
-queue_for_next_turn = false
+title = "Yaoi Poison"
+effects = Array[ExtResource("1_2e1h1")]([SubResource("Resource_12aya")])
+evoked_emotion = 2
+chance = 0.65
 texture = ExtResource("3_gq3lq")
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

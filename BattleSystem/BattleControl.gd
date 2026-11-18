@@ -9,15 +9,14 @@ const ENEMY_CONTROL = preload("uid://bjxbch0ugch8a")
 
 var selected_card: TextureCard
 var skills: Array[TextureSkill]
+var descriptions: Array[String]
 
 func _spawn_cards():
-	var deck : Array[Card] = battle_manager.player.move_set
-	var length = min(deck.size(), 4)
-	for i in range(0, length):
+	for c in battle_manager.deck:
 		var texture_card = TextureCard.new()
-		texture_card.card_stats = deck[i]
-		texture_card.texture_normal = deck[i].texture
-		texture_card.tooltip_text = deck[i].descrpition
+		texture_card.card_stats = c
+		texture_card.texture_normal = c.texture
+		texture_card.tooltip_text = c.descrpition
 		texture_card.pressed.connect(
 			func():
 				battle_manager.select_card(texture_card.card_stats)
@@ -58,6 +57,17 @@ func _hook_gui_signals():
 			)[0]
 			s_texture.modulate = Color.WHITE if s_texture.modulate == Color.NAVY_BLUE else Color.NAVY_BLUE
 	)
+	battle_manager.attack_described.connect(
+		func(attack: String):
+			descriptions.append(attack)
+			get_tree().create_timer(2.0).timeout.connect(
+				func(): 
+					descriptions.erase(attack)
+					%Descriptor.text = ""
+					for a in descriptions:
+						%Descriptor.text += '\n' + a
+					) #DANGER might cause issues in loop
+	)
 
 func start_battle(enemies: Array[EnemyStats]):
 	battle_manager.enemies = enemies
@@ -69,7 +79,10 @@ func _ready() -> void:
 	battle_manager.turn_ended.connect(
 		func():
 			_remove_cards()
-			_spawn_cards())
+			_spawn_cards.call_deferred()
+			for a in descriptions:
+				%Descriptor.text += "\n" + a
+			)
 	_hook_gui_signals()
 	$EndTurn.pressed.connect(battle_manager.process_turn)
 	%PlayerControl.set_up(battle_manager.turn_ended, battle_manager.player)

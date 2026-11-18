@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://o4ii7gs7d1w7"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_ufdei"]
+[ext_resource type="Script" uid="uid://0qwta1lco20y" path="res://Resources/Effects/gainHealth.gd" id="2_02pcv"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_5ox88"]
+
+[sub_resource type="Resource" id="Resource_02pcv"]
+script = ExtResource("2_02pcv")
+apply_on_self = true
+metadata/_custom_type_script = "uid://0qwta1lco20y"
+
+[resource]
+script = ExtResource("2_5ox88")
+effects = Array[ExtResource("1_ufdei")]([SubResource("Resource_02pcv")])
+evoked_emotion = 0
+chance = 80.0
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

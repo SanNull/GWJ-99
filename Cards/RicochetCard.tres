@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RicochetCard" format=3 uid="uid://dqk6wffmvf3es"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_cgguk"]
+[ext_resource type="Script" uid="uid://bib7watt8pxew" path="res://Resources/Effects/Ricochet.gd" id="2_fhd52"]
+[ext_resource type="Script" uid="uid://dknq0ll13512k" path="res://Resources/ricochetCard.gd" id="2_vymow"]
+
+[sub_resource type="Resource" id="Resource_fhd52"]
+script = ExtResource("2_fhd52")
+dmg = 25
+metadata/_custom_type_script = "uid://bib7watt8pxew"
+
+[resource]
+script = ExtResource("2_vymow")
+effects = Array[ExtResource("1_cgguk")]([SubResource("Resource_fhd52")])
+metadata/_custom_type_script = "uid://dknq0ll13512k"

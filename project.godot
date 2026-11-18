@@ -26,10 +26,11 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://BaseResources/": "red",
+"res://BaseResources/": "orange",
 "res://BattleSystem/": "green",
-"res://Cards/": "blue",
-"res://Effects&Skills/": "pink"
+"res://Cards/": "pink",
+"res://Characters/": "pink",
+"res://Resources/": "orange"
 }
 
 [gui]

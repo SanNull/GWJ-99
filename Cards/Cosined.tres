@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://bril781uoc06x"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_skhwo"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_fa5xq"]
+[ext_resource type="Script" uid="uid://byl3ry7w1h3j5" path="res://Resources/Effects/fourrier.gd" id="2_q3ucd"]
+
+[sub_resource type="Resource" id="Resource_q3ucd"]
+script = ExtResource("2_q3ucd")
+dmg = 30
+aplications = 3
+duration = 3
+metadata/_custom_type_script = "uid://byl3ry7w1h3j5"
+
+[resource]
+script = ExtResource("2_fa5xq")
+effects = Array[ExtResource("1_skhwo")]([SubResource("Resource_q3ucd")])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

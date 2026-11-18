@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://qgbdkl45wt0o"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_thx3r"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_eq188"]
+[ext_resource type="Script" uid="uid://cvtwqr2la4dpa" path="res://Resources/Effects/loseArmor.gd" id="2_yk6la"]
+[ext_resource type="Script" uid="uid://bk044dtnk7qrm" path="res://Resources/multiplier_skill.gd" id="3_p1uad"]
+[ext_resource type="Script" uid="uid://dqvx0r3vggqcp" path="res://Resources/Effects/addSkill.gd" id="4_jdafe"]
+
+[sub_resource type="Resource" id="Resource_jv0n8"]
+script = ExtResource("2_yk6la")
+apply_on_self = true
+metadata/_custom_type_script = "uid://cvtwqr2la4dpa"
+
+[sub_resource type="Resource" id="Resource_nef21"]
+script = ExtResource("3_p1uad")
+multiplier = 2.0
+points_required = 0
+metadata/_custom_type_script = "uid://bk044dtnk7qrm"
+
+[sub_resource type="Resource" id="Resource_wppj2"]
+script = ExtResource("4_jdafe")
+eff_skill = SubResource("Resource_nef21")
+apply_on_self = true
+duration = 2
+metadata/_custom_type_script = "uid://dqvx0r3vggqcp"
+
+[resource]
+script = ExtResource("2_eq188")
+effects = Array[ExtResource("1_thx3r")]([SubResource("Resource_jv0n8"), SubResource("Resource_wppj2")])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

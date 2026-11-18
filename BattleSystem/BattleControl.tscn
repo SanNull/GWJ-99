@@ -36,6 +36,13 @@ anchor_bottom = 0.99132323
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Descriptor" type="RichTextLabel" parent="Background" unique_id=1950939058]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 1145.0
+offset_bottom = 85.0
+text = "TESTTTEST"
+
 [node name="PlayerContainer" type="HBoxContainer" parent="." unique_id=1953785843]
 layout_mode = 1
 anchors_preset = -1
