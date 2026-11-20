@@ -16,7 +16,7 @@ func _spawn_cards():
 		var texture_card = TextureCard.new()
 		texture_card.card_stats = c
 		texture_card.texture_normal = c.texture
-		texture_card.tooltip_text = c.descrpition
+		texture_card.tooltip_text = c.title + "\n" + c.descrpition
 		texture_card.pressed.connect(
 			func():
 				battle_manager.select_card(texture_card.card_stats)
@@ -84,5 +84,7 @@ func _ready() -> void:
 				%Descriptor.text += "\n" + a
 			)
 	_hook_gui_signals()
+	battle_manager.battle_ended.connect(func (has_won):
+		print("Yay") if has_won else print("I'm so sorry"))
 	$EndTurn.pressed.connect(battle_manager.process_turn)
 	%PlayerControl.set_up(battle_manager.turn_ended, battle_manager.player)

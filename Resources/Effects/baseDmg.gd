@@ -5,7 +5,7 @@ extends Effect
 @export var dmg := 10.0
 
 func apply(character: Character, skills: Array[Skill] = []):
-	var dealt_dmg = dmg - 2 * int(character.current_emotion == character.EMOTIONS.HEARTSTRIKEN)
+	var dealt_dmg = dmg
 	for skill in skills:
 		if skill is MultiplierSkill:
 			dealt_dmg *= skill.multiplier
@@ -13,3 +13,6 @@ func apply(character: Character, skills: Array[Skill] = []):
 
 func filter_skill(skill: Skill):
 	return skill is MultiplierSkill
+
+func remove(character: Character, skills: Array[Skill] = []):
+	return

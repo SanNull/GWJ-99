@@ -8,3 +8,6 @@ func apply(character: Character, skills: Array[Skill] = []):
 	var hp_to_gain = character.hp * hp_percent
 	# if skill
 	character.hp = minf(character.hp + hp_to_gain, character.max_hp)
+
+func remove(character: Character, skills: Array[Skill] = []):
+	return

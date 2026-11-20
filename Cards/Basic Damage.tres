@@ -7,10 +7,12 @@
 
 [sub_resource type="Resource" id="Resource_qd2nv"]
 script = ExtResource("2_qd2nv")
+dmg = 13.0
 metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
 
 [resource]
 script = ExtResource("2_2tqvd")
+title = "Attack"
 descrpition = "Deal 10%s Damage."
 effects = Array[ExtResource("1_c6u2j")]([SubResource("Resource_qd2nv")])
 texture = ExtResource("4_qd2nv")

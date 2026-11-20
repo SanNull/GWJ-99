@@ -14,6 +14,7 @@ var selected_skills: Array[Skill]
 var selected_enemy : EnemyStats
 
 var queue: Array[TrinitySet]
+var new_clean_up : Array[TrinitySet]
 var clean_up: Array[TrinitySet]
 
 func _on_turn_start():
@@ -35,6 +36,7 @@ func process_turn():
 	if player.hp <= .0:
 		battle_ended.emit(false)
 		return
+	_clean_up_effects() #Clean up previous effects
 	turn_ended.emit()
 
 func clear_selection():
@@ -78,7 +80,8 @@ func _apply_queued_cards():
 		if trinity.apply_effect():
 			attack_described.emit(trinity.get_attack_description())
 		if trinity.is_done_for():
-			clean_up.append(trinity)
+			if trinity.effect.need_removal:
+				new_clean_up.append(trinity)
 			continue
 		remaining_cards.append(trinity)
 	queue = remaining_cards
@@ -86,7 +89,8 @@ func _apply_queued_cards():
 func _clean_up_effects():
 	for trinity in clean_up:
 		trinity.clear_effect()
-	clean_up = []
+	clean_up = new_clean_up.duplicate()
+	new_clean_up = []
 
 func _queue_player_card(c: Card, enemy: Character):
 	for eff in c.effects:

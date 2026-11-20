@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bhpc61wcfdw0h"]
+
+[ext_resource type="Script" uid="uid://kwirmkavp1g3" path="res://BattleSystem/hoverable_texture.gd" id="1_e8mrq"]
+
+[node name="HoverableCards" type="Control" unique_id=1339318922]
+layout_mode = 3
+anchor_right = 1.0026041
+anchor_bottom = 0.23919754
+script = ExtResource("1_e8mrq")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=549867928]
+visible = false
+z_index = 2
+z_as_relative = false
+custom_maximum_size = Vector2(500, 250)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.011255411
+anchor_bottom = 0.7419355
+mouse_filter = 2
+fit_content = true
+autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="ColorRect" parent="RichTextLabel" unique_id=705841752]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true

@@ -13,6 +13,7 @@ metadata/_custom_type_script = "uid://bfvlbh3rlhh5w"
 
 [resource]
 script = ExtResource("2_fra8p")
+title = "Self Defense"
 descrpition = "Defends 10%s on next turn"
 effects = Array[ExtResource("1_d7not")]([SubResource("Resource_d7not")])
 texture = ExtResource("3_s0y2j")

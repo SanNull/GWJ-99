@@ -7,12 +7,15 @@
 
 [sub_resource type="Resource" id="Resource_12aya"]
 script = ExtResource("2_gq3lq")
+aplications = 3
+duration = 3
 metadata/_custom_type_script = "uid://b2vvfl2juf3ak"
 
 [resource]
 script = ExtResource("2_12aya")
 title = "Yaoi Poison"
 effects = Array[ExtResource("1_2e1h1")]([SubResource("Resource_12aya")])
+enabled_emotions = Array[int]([0])
 evoked_emotion = 2
 chance = 0.65
 texture = ExtResource("3_gq3lq")

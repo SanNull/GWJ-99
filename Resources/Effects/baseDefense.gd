@@ -5,6 +5,11 @@ extends Effect
 @export var defense := 10
 
 func apply(character: Character, skills: Array[Skill] = []):
+	descrpition = descrpition % defense
+	if character is playerStats:
+		descrpition = "You " + descrpition
+	else:
+		descrpition = "It " + descrpition  
 	character.defense += defense #TODO its permanent
 
 func remove(character: Character, skills: Array[Skill] = []):
@@ -13,4 +18,5 @@ func remove(character: Character, skills: Array[Skill] = []):
 func filter_skill(skill: Skill):
 	return skill is MultiplierSkill
 
-	
+func _init() -> void:
+	descrpition = "gained %s defense"

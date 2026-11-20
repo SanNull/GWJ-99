@@ -11,5 +11,7 @@ metadata/_custom_type_script = "uid://u1t6573woben"
 
 [resource]
 script = ExtResource("2_n2xp7")
+title = "Translation Scalar"
 effects = Array[ExtResource("1_c32ro")]([SubResource("Resource_jv0n8")])
+enabled_emotions = Array[int]([3])
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

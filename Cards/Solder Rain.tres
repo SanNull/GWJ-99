@@ -21,6 +21,9 @@ metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
 
 [resource]
 script = ExtResource("2_ywjyi")
+title = "Solder Rain"
 effects = Array[ExtResource("1_tfxml")]([SubResource("Resource_3ebj7"), SubResource("Resource_w1mvk")])
 enabled_emotions = Array[int]([1])
+evoked_emotion = 0
+chance = 0.6
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

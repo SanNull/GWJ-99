@@ -11,5 +11,6 @@ metadata/_custom_type_script = "uid://bib7watt8pxew"
 
 [resource]
 script = ExtResource("2_vymow")
+title = "Ricochet"
 effects = Array[ExtResource("1_cgguk")]([SubResource("Resource_fhd52")])
 metadata/_custom_type_script = "uid://dknq0ll13512k"

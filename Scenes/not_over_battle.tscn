@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://degs3ponj25j3"]
+
+[ext_resource type="PackedScene" uid="uid://sh0b5vpde6xf" path="res://BattleSystem/base_battle.tscn" id="1_767my"]
+[ext_resource type="Script" uid="uid://c7qpvtmkey8b3" path="res://BaseResources/EnemyStats.gd" id="2_jbn8w"]
+[ext_resource type="Resource" uid="uid://cranr2yau4vqf" path="res://Characters/NotOver.tres" id="3_0837n"]
+[ext_resource type="Script" uid="uid://cjnucr1l5i3eb" path="res://BaseResources/EnemySet.gd" id="4_apgcn"]
+
+[sub_resource type="Resource" id="Resource_767my"]
+script = ExtResource("4_apgcn")
+enemy_set = Array[ExtResource("2_jbn8w")]([ExtResource("3_0837n")])
+metadata/_custom_type_script = "uid://cjnucr1l5i3eb"
+
+[node name="NotOverBattle" unique_id=1365340935 instance=ExtResource("1_767my")]
+enemy_set = SubResource("Resource_767my")
+
+[node name="Descriptor" parent="BattleControl/Background" parent_id_path=PackedInt32Array(708539934, 966567608) index="2" unique_id=1950939058]
+text = ""
+
+[editable path="BattleControl"]

@@ -13,3 +13,6 @@ func who_to_apply(yourself, other):
 
 func _init() -> void:
 	dmg = 25.0
+
+func remove(character: Character, skills: Array[Skill] = []):
+	return

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dru054o23igmp"]
+
+[ext_resource type="Script" uid="uid://kwirmkavp1g3" path="res://BattleSystem/hoverable_texture.gd" id="1_1ww15"]
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="2_10w20"]
+
+[node name="HoverableTexture" type="Control" unique_id=1339318922]
+layout_mode = 3
+anchor_right = 1.0026041
+anchor_bottom = 0.23919754
+script = ExtResource("1_1ww15")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1645179094]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_10w20")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1881985581]
+visible = false
+z_index = 2
+z_as_relative = false
+custom_maximum_size = Vector2(500, 250)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.011255411
+anchor_bottom = 0.7419355
+mouse_filter = 2
+fit_content = true
+autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="ColorRect" parent="RichTextLabel" unique_id=2047160066]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]

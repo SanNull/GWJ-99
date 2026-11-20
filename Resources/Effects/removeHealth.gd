@@ -5,3 +5,6 @@ extends Effect
 
 func apply(character: Character, skills: Array[Skill] = []):
 	character.hp *= deflator
+
+func remove(character: Character, skills: Array[Skill] = []):
+	return

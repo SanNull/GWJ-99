@@ -6,12 +6,16 @@
 
 [sub_resource type="Resource" id="Resource_q3ucd"]
 script = ExtResource("2_q3ucd")
-dmg = 30
+dmg = 30.0
 aplications = 3
 duration = 3
 metadata/_custom_type_script = "uid://byl3ry7w1h3j5"
 
 [resource]
 script = ExtResource("2_fa5xq")
+title = "Cosined"
 effects = Array[ExtResource("1_skhwo")]([SubResource("Resource_q3ucd")])
+enabled_emotions = Array[int]([3])
+evoked_emotion = 0
+chance = 0.45
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

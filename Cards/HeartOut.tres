@@ -12,5 +12,7 @@ metadata/_custom_type_script = "uid://dlcveu4pnldq1"
 
 [resource]
 script = ExtResource("2_eq188")
+title = "Heart Out"
 effects = Array[ExtResource("1_thx3r")]([SubResource("Resource_jv0n8")])
+enabled_emotions = Array[int]([2])
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

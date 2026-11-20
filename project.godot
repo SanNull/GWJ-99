@@ -35,6 +35,7 @@ folder_colors={
 
 [gui]
 
+timers/tooltip_delay_sec=0.2
 common/auto_focus_strategy=1
 
 [input_devices]

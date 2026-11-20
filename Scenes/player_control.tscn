@@ -1,35 +1,38 @@
 [gd_scene format=3 uid="uid://bc7ybayes2845"]
 
 [ext_resource type="Script" uid="uid://carxou3i03rsd" path="res://Scenes/player_control.gd" id="1_2qh2c"]
+[ext_resource type="Script" uid="uid://vk8k7pl57uga" path="res://Scenes/icons.gd" id="2_6nguo"]
 [ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="2_kb8kp"]
 
-[node name="PlayerControl" type="Control" unique_id=44106323]
+[node name="PlayerControl" type="VBoxContainer" unique_id=372240529]
 custom_minimum_size = Vector2(256, 0)
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_2qh2c")
-
-[node name="Emotion" type="TextureRect" parent="." unique_id=1144053047]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = -128.0
+offset_top = -79.5
+offset_right = 128.0
+offset_bottom = 79.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2qh2c")
+
+[node name="Icons" type="VBoxContainer" parent="." unique_id=1544173945]
+custom_maximum_size = Vector2(-1, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("2_6nguo")
+
+[node name="Defense" type="TextureRect" parent="Icons" unique_id=1201645613]
+layout_mode = 2
+texture = ExtResource("2_kb8kp")
+
+[node name="Emotion" type="TextureRect" parent="." unique_id=1144053047]
+layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("2_kb8kp")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1766042825]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -27.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2

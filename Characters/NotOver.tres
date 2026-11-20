@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NotOverEnemy" format=3 uid="uid://cranr2yau4vqf"]
+
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="1_n641c"]
+[ext_resource type="Script" uid="uid://iv04hg45lwos" path="res://Characters/notOver.gd" id="2_n641c"]
+[ext_resource type="Script" uid="uid://do17m6orb6p4f" path="res://BaseResources/Skill.gd" id="3_loa24"]
+
+[resource]
+script = ExtResource("2_n641c")
+metadata/_custom_type_script = "uid://iv04hg45lwos"

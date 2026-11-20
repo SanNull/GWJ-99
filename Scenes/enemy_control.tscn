@@ -4,15 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="2_qnol8"]
 
 [node name="EnemyControl" type="VBoxContainer" unique_id=457240052]
-anchors_preset = -1
-anchor_right = 0.11111111
-anchor_bottom = 0.19907407
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -113.5
+offset_right = 64.0
+offset_bottom = 113.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_xvrdg")
-metadata/_edit_use_anchors_ = true
+
+[node name="Icons" type="HBoxContainer" parent="." unique_id=1445582429]
+layout_mode = 2
+
+[node name="Defense" type="TextureRect" parent="Icons" unique_id=1202377969]
+layout_mode = 2
+texture = ExtResource("2_qnol8")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1218326635]
 layout_mode = 2

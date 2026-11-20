@@ -20,3 +20,4 @@ func evoke_emotion():
 	var r := randf_range(.0, 1.0)
 	if r <= chance:
 		return evoked_emotion
+	return BattleManager.get_player().current_emotion

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://46jvqnr1ifvl"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_p1xj1"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_dhce1"]
+[ext_resource type="Script" uid="uid://b2vvfl2juf3ak" path="res://Resources/Effects/pierceDamage.gd" id="2_f2u0x"]
+
+[sub_resource type="Resource" id="Resource_f2u0x"]
+script = ExtResource("2_f2u0x")
+dmg = 20
+metadata/_custom_type_script = "uid://b2vvfl2juf3ak"
+
+[resource]
+script = ExtResource("2_dhce1")
+title = "Pierce Damage"
+effects = Array[ExtResource("1_p1xj1")]([SubResource("Resource_f2u0x")])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

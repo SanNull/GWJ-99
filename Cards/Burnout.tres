@@ -18,5 +18,10 @@ metadata/_custom_type_script = "uid://cvtwqr2la4dpa"
 
 [resource]
 script = ExtResource("2_5bgtw")
+title = "Burnout"
+descrpition = "Deal 35 piercing damage and lose all armor for the rest of battle"
 effects = Array[ExtResource("1_gu23x")]([SubResource("Resource_ixwhh"), SubResource("Resource_1dvkx")])
+enabled_emotions = Array[int]([3])
+evoked_emotion = 1
+chance = 0.95
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

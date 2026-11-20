@@ -11,7 +11,9 @@ metadata/_custom_type_script = "uid://0qwta1lco20y"
 
 [resource]
 script = ExtResource("2_5ox88")
+title = "Grieve"
 effects = Array[ExtResource("1_ufdei")]([SubResource("Resource_02pcv")])
+enabled_emotions = Array[int]([1])
 evoked_emotion = 0
 chance = 80.0
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

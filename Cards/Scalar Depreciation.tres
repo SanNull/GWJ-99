@@ -23,5 +23,7 @@ metadata/_custom_type_script = "uid://cvtwqr2la4dpa"
 
 [resource]
 script = ExtResource("2_bbtlu")
+title = "Scalar Depreciation"
 effects = Array[ExtResource("1_kybgm")]([SubResource("Resource_rcffo"), SubResource("Resource_vibbk")])
+enabled_emotions = Array[int]([3])
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

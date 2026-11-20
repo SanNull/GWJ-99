@@ -9,3 +9,6 @@ func apply(character: Character, skills: Array[Skill] = []):
 
 func filter_skill(skill: Skill):
 	return skill is MultiplierSkill
+
+func remove(character: Character, skills: Array[Skill] = []):
+	return

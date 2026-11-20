@@ -26,5 +26,9 @@ metadata/_custom_type_script = "uid://dqvx0r3vggqcp"
 
 [resource]
 script = ExtResource("2_eq188")
+title = "Lose Self"
 effects = Array[ExtResource("1_thx3r")]([SubResource("Resource_jv0n8"), SubResource("Resource_wppj2")])
+enabled_emotions = Array[int]([2])
+evoked_emotion = 1
+chance = 0.2
 metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

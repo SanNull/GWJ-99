@@ -14,8 +14,7 @@
 func filter_skill(skill: Skill):
 	return null
 
-func remove(character: Character, skills: Array[Skill] = []):
-	return 
+@abstract func remove(character: Character, skills: Array[Skill] = [])
 
 func who_to_apply(yourself, other):
 	return yourself if apply_on_self else other
