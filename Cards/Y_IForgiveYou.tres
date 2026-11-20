@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://dnosnewqy8kdy"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_7q0tf"]
+[ext_resource type="Script" uid="uid://cvtwqr2la4dpa" path="res://Resources/Effects/loseArmor.gd" id="2_7ugx3"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_prot6"]
+[ext_resource type="Script" uid="uid://0qwta1lco20y" path="res://Resources/Effects/gainHealth.gd" id="3_ntbpj"]
+
+[sub_resource type="Resource" id="Resource_7ugx3"]
+script = ExtResource("2_7ugx3")
+char_deflator = 0.95
+apply_on_self = true
+metadata/_custom_type_script = "uid://cvtwqr2la4dpa"
+
+[sub_resource type="Resource" id="Resource_ntbpj"]
+script = ExtResource("3_ntbpj")
+hp_percent = 0.42
+apply_on_self = true
+metadata/_custom_type_script = "uid://0qwta1lco20y"
+
+[resource]
+script = ExtResource("2_prot6")
+title = "I Forgive You"
+effects = Array[ExtResource("1_7q0tf")]([SubResource("Resource_7ugx3"), SubResource("Resource_ntbpj")])
+enabled_emotions = Array[int]([2])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

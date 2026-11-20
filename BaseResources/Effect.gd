@@ -6,7 +6,7 @@
 
 @export var aplications := 1
 @export var duration := 1
-@export var start_on_next_turn := false
+@export var offset := 0
 @export var descrpition: String = ""
 
 @abstract func apply(character: Character, skills: Array[Skill] = [])

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://ckir175a1l1wt"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_e0ut0"]
+[ext_resource type="Script" uid="uid://dp7rcrh1rmc01" path="res://Resources/Effects/baseDmg.gd" id="2_63ecn"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="3_uvh3l"]
+
+[sub_resource type="Resource" id="Resource_vs60d"]
+script = ExtResource("2_63ecn")
+dmg = 25.0
+apply_on_self = true
+metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
+
+[sub_resource type="Resource" id="Resource_baadr"]
+script = ExtResource("2_63ecn")
+dmg = 50.0
+offset = 3
+descrpition = "Ataquei Arrasei"
+metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
+
+[resource]
+script = ExtResource("3_uvh3l")
+title = "Daddy Ford"
+descrpition = "Innovation is Key, but takes time. Takes 25 damages and deals 50 after 3 turns. High chance of feeling Robotic"
+effects = Array[ExtResource("1_e0ut0")]([SubResource("Resource_vs60d"), SubResource("Resource_baadr")])
+enabled_emotions = Array[int]([0])
+evoked_emotion = 3
+chance = 1.0
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

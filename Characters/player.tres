@@ -1,22 +1,26 @@
 [gd_resource type="Resource" script_class="playerStats" format=3 uid="uid://275umrv2cusc"]
 
 [ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="1_c4f1r"]
-[ext_resource type="Resource" uid="uid://viw1fgxo4xwo" path="res://Cards/Basic Damage.tres" id="2_1xy7x"]
+[ext_resource type="Resource" uid="uid://viw1fgxo4xwo" path="res://Cards/A_Basic Damage.tres" id="2_4hj37"]
 [ext_resource type="Script" uid="uid://ch7fqtk7rpoya" path="res://BaseResources/playerStats.gd" id="2_4pc0w"]
-[ext_resource type="Resource" uid="uid://bhintxtvlmx8f" path="res://Cards/Burnout.tres" id="3_7dooe"]
+[ext_resource type="Resource" uid="uid://bhintxtvlmx8f" path="res://Cards/R_Burnout.tres" id="3_aqyrt"]
 [ext_resource type="Script" uid="uid://do17m6orb6p4f" path="res://BaseResources/Skill.gd" id="3_m5jtw"]
-[ext_resource type="Resource" uid="uid://bril781uoc06x" path="res://Cards/Cosined.tres" id="4_oigwd"]
-[ext_resource type="Resource" uid="uid://o3rdf4niawjo" path="res://Cards/Defense.tres" id="5_rukiu"]
-[ext_resource type="Resource" uid="uid://o4ii7gs7d1w7" path="res://Cards/Grieve.tres" id="6_4hj37"]
-[ext_resource type="Resource" uid="uid://cqpnew6r1kexx" path="res://Cards/HeartOut.tres" id="7_aqyrt"]
-[ext_resource type="Resource" uid="uid://qgbdkl45wt0o" path="res://Cards/LoseSelf.tres" id="8_f0hc0"]
-[ext_resource type="Resource" uid="uid://dqk6wffmvf3es" path="res://Cards/RicochetCard.tres" id="10_uoerc"]
-[ext_resource type="Resource" uid="uid://cw15hnhd45kso" path="res://Cards/Scalar Depreciation.tres" id="11_lm1rf"]
-[ext_resource type="Resource" uid="uid://xxo18a614303" path="res://Cards/Solder Rain.tres" id="12_50dye"]
-[ext_resource type="Resource" uid="uid://cgumy6fjy72nb" path="res://Cards/TranslationScalar.tres" id="13_rdydt"]
-[ext_resource type="Resource" uid="uid://bmcijkxt1puia" path="res://Cards/Weep.tres" id="14_6gdym"]
-[ext_resource type="Resource" uid="uid://cb2j1yrtqqatn" path="res://Cards/YaoiPoison.tres" id="15_3dn8h"]
+[ext_resource type="Resource" uid="uid://bril781uoc06x" path="res://Cards/R_Cosined.tres" id="4_f0hc0"]
+[ext_resource type="Resource" uid="uid://o3rdf4niawjo" path="res://Cards/A_Defense.tres" id="5_2uc1t"]
+[ext_resource type="Resource" uid="uid://o4ii7gs7d1w7" path="res://Cards/H_Grieve.tres" id="6_uoerc"]
+[ext_resource type="Resource" uid="uid://cqpnew6r1kexx" path="res://Cards/Y_HeartOut.tres" id="7_lm1rf"]
+[ext_resource type="Resource" uid="uid://bggrj6gi3eakl" path="res://Cards/Y_Jolt.tres" id="9_rdydt"]
+[ext_resource type="Resource" uid="uid://bnvjyy8hm1dcy" path="res://Cards/Y_LoveBomb.tres" id="10_6gdym"]
+[ext_resource type="Resource" uid="uid://dnosnewqy8kdy" path="res://Cards/Y_IForgiveYou.tres" id="11_3dn8h"]
+[ext_resource type="Resource" uid="uid://dqk6wffmvf3es" path="res://Cards/A_RicochetCard.tres" id="12_0wbak"]
+[ext_resource type="Resource" uid="uid://cw15hnhd45kso" path="res://Cards/R_Scalar Depreciation.tres" id="13_rxswy"]
+[ext_resource type="Resource" uid="uid://xxo18a614303" path="res://Cards/H_Solder Rain.tres" id="14_xm1ix"]
+[ext_resource type="Resource" uid="uid://cgumy6fjy72nb" path="res://Cards/R_TranslationScalar.tres" id="15_j8hme"]
+[ext_resource type="Resource" uid="uid://bmcijkxt1puia" path="res://Cards/H_Weep.tres" id="16_x6oo2"]
 [ext_resource type="Script" uid="uid://bk044dtnk7qrm" path="res://Resources/multiplier_skill.gd" id="17_1xy7x"]
+[ext_resource type="Resource" uid="uid://cb2j1yrtqqatn" path="res://Cards/A_YaoiPoison.tres" id="17_gl7au"]
+[ext_resource type="Resource" uid="uid://bx27pkb3lxo0" path="res://Cards/Y_Stare.tres" id="18_4hj37"]
+[ext_resource type="Resource" uid="uid://ckir175a1l1wt" path="res://Cards/A_DaddyFord.tres" id="18_ncoxo"]
 
 [sub_resource type="Resource" id="Resource_kb8kp"]
 script = ExtResource("17_1xy7x")
@@ -24,6 +28,6 @@ metadata/_custom_type_script = "uid://bk044dtnk7qrm"
 
 [resource]
 script = ExtResource("2_4pc0w")
-move_set = Array[ExtResource("1_c4f1r")]([ExtResource("2_1xy7x"), ExtResource("3_7dooe"), ExtResource("4_oigwd"), ExtResource("5_rukiu"), ExtResource("6_4hj37"), ExtResource("7_aqyrt"), ExtResource("8_f0hc0"), ExtResource("10_uoerc"), ExtResource("11_lm1rf"), ExtResource("12_50dye"), ExtResource("13_rdydt"), ExtResource("14_6gdym"), ExtResource("15_3dn8h")])
+move_set = Array[ExtResource("1_c4f1r")]([ExtResource("2_4hj37"), ExtResource("3_aqyrt"), ExtResource("4_f0hc0"), ExtResource("5_2uc1t"), ExtResource("6_uoerc"), ExtResource("7_lm1rf"), ExtResource("9_rdydt"), ExtResource("10_6gdym"), ExtResource("11_3dn8h"), ExtResource("12_0wbak"), ExtResource("13_rxswy"), ExtResource("14_xm1ix"), ExtResource("15_j8hme"), ExtResource("16_x6oo2"), ExtResource("17_gl7au"), ExtResource("18_ncoxo"), ExtResource("18_4hj37")])
 skills = Array[ExtResource("3_m5jtw")]([SubResource("Resource_kb8kp")])
 metadata/_custom_type_script = "uid://ch7fqtk7rpoya"

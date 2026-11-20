@@ -26,9 +26,9 @@ static func get_player():
 	return player
 
 func process_turn():
+	_use_card(selected_card, player)
 	for e in enemies:
 		_use_card(e.pick_card(), e)
-	_use_card(selected_card, player)
 	_apply_queued_cards()
 	if enemies.filter(func(enemy: EnemyStats): return enemy.hp > 0).size() == 0:
 		battle_ended.emit(true)
@@ -36,6 +36,7 @@ func process_turn():
 	if player.hp <= .0:
 		battle_ended.emit(false)
 		return
+	_prepare_cleanup()
 	_clean_up_effects() #Clean up previous effects
 	turn_ended.emit()
 
@@ -89,6 +90,9 @@ func _apply_queued_cards():
 func _clean_up_effects():
 	for trinity in clean_up:
 		trinity.clear_effect()
+
+#Prepare to clean up stuff in the next turn
+func _prepare_cleanup():
 	clean_up = new_clean_up.duplicate()
 	new_clean_up = []
 
@@ -98,13 +102,13 @@ func _queue_player_card(c: Card, enemy: Character):
 		var target =  eff.who_to_apply(player, enemy)
 		if eff is Ricochet and target == player:
 			player.current_emotion = Character.EMOTIONS.HEARTSTRIKEN
-		queue.append(TrinitySet.new(target, skill, eff.duplicate()))
+		queue.append(TrinitySet.new(target, player, skill, eff.duplicate()))
 
 func _queue_enemy_card(c: Card, dealer: EnemyStats):
 	for eff in c.effects:
 		var skill = dealer.skills.filter(eff.filter_skill)
 		var target =  eff.who_to_apply(dealer, player)
-		queue.append(TrinitySet.new(target, skill, eff.duplicate()))
+		queue.append(TrinitySet.new(target, dealer, skill, eff.duplicate()))
 
 func toggle_skill_to_list(skill: Skill, skill_signal: Signal):
 	if skill in selected_skills:

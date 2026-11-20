@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://o3rdf4niawjo"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_yhpbo"]
+[ext_resource type="Script" uid="uid://bfvlbh3rlhh5w" path="res://Resources/Effects/baseDefense.gd" id="2_b30yt"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="3_rys5u"]
+[ext_resource type="Texture2D" uid="uid://dhxwsoj4x0jxp" path="res://icon.svg" id="4_y7x11"]
+
+[sub_resource type="Resource" id="Resource_d7not"]
+script = ExtResource("2_b30yt")
+apply_on_self = true
+need_removal = true
+descrpition = "gained %s defense"
+metadata/_custom_type_script = "uid://bfvlbh3rlhh5w"
+
+[resource]
+script = ExtResource("3_rys5u")
+title = "Self Defense"
+descrpition = "Defends 10 on the next 3 turns"
+effects = Array[ExtResource("1_yhpbo")]([SubResource("Resource_d7not")])
+enabled_emotions = Array[int]([0])
+texture = ExtResource("4_y7x11")
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

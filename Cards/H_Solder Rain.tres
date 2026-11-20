@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://xxo18a614303"]
 
-[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_tfxml"]
-[ext_resource type="Script" uid="uid://dp7rcrh1rmc01" path="res://Resources/Effects/baseDmg.gd" id="2_3ebj7"]
-[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_ywjyi"]
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_somn5"]
+[ext_resource type="Script" uid="uid://dp7rcrh1rmc01" path="res://Resources/Effects/baseDmg.gd" id="2_tk87o"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="3_sna3y"]
 
 [sub_resource type="Resource" id="Resource_3ebj7"]
-script = ExtResource("2_3ebj7")
+script = ExtResource("2_tk87o")
 dmg = 15.0
 aplications = 3
 duration = 3
 metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
 
 [sub_resource type="Resource" id="Resource_w1mvk"]
-script = ExtResource("2_3ebj7")
+script = ExtResource("2_tk87o")
 dmg = 7.5
 apply_on_self = true
 aplications = 3
@@ -20,9 +20,9 @@ duration = 3
 metadata/_custom_type_script = "uid://dp7rcrh1rmc01"
 
 [resource]
-script = ExtResource("2_ywjyi")
+script = ExtResource("3_sna3y")
 title = "Solder Rain"
-effects = Array[ExtResource("1_tfxml")]([SubResource("Resource_3ebj7"), SubResource("Resource_w1mvk")])
+effects = Array[ExtResource("1_somn5")]([SubResource("Resource_3ebj7"), SubResource("Resource_w1mvk")])
 enabled_emotions = Array[int]([1])
 evoked_emotion = 0
 chance = 0.6

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://cw15hnhd45kso"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_rb4lf"]
+[ext_resource type="Script" uid="uid://bk044dtnk7qrm" path="res://Resources/multiplier_skill.gd" id="2_xdw3j"]
+[ext_resource type="Script" uid="uid://dqvx0r3vggqcp" path="res://Resources/Effects/addSkill.gd" id="3_vsh5g"]
+[ext_resource type="Script" uid="uid://cvtwqr2la4dpa" path="res://Resources/Effects/loseArmor.gd" id="4_0oidd"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="5_ing6l"]
+
+[sub_resource type="Resource" id="Resource_vc8ji"]
+script = ExtResource("2_xdw3j")
+metadata/_custom_type_script = "uid://bk044dtnk7qrm"
+
+[sub_resource type="Resource" id="Resource_rcffo"]
+script = ExtResource("3_vsh5g")
+eff_skill = SubResource("Resource_vc8ji")
+metadata/_custom_type_script = "uid://dqvx0r3vggqcp"
+
+[sub_resource type="Resource" id="Resource_vibbk"]
+script = ExtResource("4_0oidd")
+apply_on_self = true
+duration = 2
+metadata/_custom_type_script = "uid://cvtwqr2la4dpa"
+
+[resource]
+script = ExtResource("5_ing6l")
+title = "Scalar Depreciation"
+effects = Array[ExtResource("1_rb4lf")]([SubResource("Resource_rcffo"), SubResource("Resource_vibbk")])
+enabled_emotions = Array[int]([3])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

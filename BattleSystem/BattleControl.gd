@@ -73,7 +73,7 @@ func start_battle(enemies: Array[EnemyStats]):
 	battle_manager.enemies = enemies
 	_spawn_cards()
 	_spawn_enemies()
-	_spawn_skills()
+	#_spawn_skills()
 
 func _ready() -> void:
 	battle_manager.turn_ended.connect(

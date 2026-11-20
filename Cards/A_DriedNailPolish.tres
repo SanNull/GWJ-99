@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://c2sxulg85t6la"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_r3tkx"]
+[ext_resource type="Script" uid="uid://0qwta1lco20y" path="res://Resources/Effects/gainHealth.gd" id="2_fj7ol"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="3_p18ff"]
+
+[sub_resource type="Resource" id="Resource_hebnr"]
+script = ExtResource("2_fj7ol")
+hp_percent = 0.25
+apply_on_self = true
+metadata/_custom_type_script = "uid://0qwta1lco20y"
+
+[resource]
+script = ExtResource("3_p18ff")
+title = "Dried Nail Polish"
+effects = Array[ExtResource("1_r3tkx")]([SubResource("Resource_hebnr")])
+enabled_emotions = Array[int]([0])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

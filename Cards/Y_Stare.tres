@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://bx27pkb3lxo0"]
+
+[ext_resource type="Script" uid="uid://1xcwf3tk3d3" path="res://BaseResources/Effect.gd" id="1_badko"]
+[ext_resource type="Script" uid="uid://bkm8dvrtbjgfh" path="res://Resources/Effects/stun.gd" id="2_hsgck"]
+[ext_resource type="Script" uid="uid://yt8w0c3j6a1j" path="res://BaseResources/Card.gd" id="2_ytdij"]
+
+[sub_resource type="Resource" id="Resource_767my"]
+script = ExtResource("2_hsgck")
+chance = 1.0
+need_removal = true
+metadata/_custom_type_script = "uid://bkm8dvrtbjgfh"
+
+[resource]
+script = ExtResource("2_ytdij")
+title = "Stun"
+effects = Array[ExtResource("1_badko")]([SubResource("Resource_767my")])
+metadata/_custom_type_script = "uid://yt8w0c3j6a1j"

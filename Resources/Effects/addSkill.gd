@@ -10,8 +10,7 @@ func apply(character: Character, skills: Array[Skill] = []):
 	else: descrpition = descrpition % "Enemy"
 
 func remove(character: Character, skills: Array[Skill] = []):
-	if character is playerStats:
-		character.skills.erase(eff_skill)
+	character.skills.erase(eff_skill)
 
 func filter_skill(skill: Skill):
 	return null
